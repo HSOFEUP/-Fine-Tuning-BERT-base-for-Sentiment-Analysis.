@@ -1,0 +1,28 @@
+{%extends 'base.html'%}
+
+{%block head%}<title>sentiment</title>{%endblock%}
+
+{%block body%}
+
+<div>
+<h1> Add a review </h1>
+<form action="/" method='POST'>
+    Text : <input type="text" name='review' id = 'review' >
+    <br>
+    <input type='submit' value="get sentiment">
+</form>
+</div>
+<hr>
+<hr>
+
+<div>
+    <h1>Get Sentiment</h1>
+    {% if review %}
+        <h2>Review : </h2><p>{{review}}</p>
+        <h2>sentiment : {{pred}}</h2>
+
+    {%endif%}
+
+</div>
+
+{%endblock%}
